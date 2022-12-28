@@ -17,6 +17,13 @@ io.on('connection', client => {
     client.on('disconnect', () => { 
         console.log('Cliente desconectado');
     });
+
+    client.on('message', (messageInfoPayload) => {
+        console.log('Message: ', messageInfoPayload);
+
+        io.emit('message', { admin: 'New message' });
+    });
+    
 });
 
 // [Public path]
