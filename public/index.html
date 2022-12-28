@@ -25,7 +25,8 @@
 
         // [Emit event]
         socket.emit('message', { nombre: 'Bryan Alejandro' });
-
+        // socket.emit('emitir-mensaje', { nombre: 'Bryan Hey!!!' });
+        
         // [Listen event]
         socket.on('message', function(messageInfoPayload) {
             console.log('Escuchando: ', messageInfoPayload);
